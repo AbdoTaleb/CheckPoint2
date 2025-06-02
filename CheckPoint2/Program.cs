@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 
-
+// Define the Product class with three properties: Category, Name, and Price
 class Product
 {
     public string Category { get; set; }
@@ -18,6 +18,7 @@ class Product
 
     class Program
     {
+        // List to store all products
         static List<Product> products = new List<Product>();
         static void Main(string[] args)
         {
@@ -25,6 +26,7 @@ class Product
 
             AddProductLoop();
 
+            // Main loop
             while (true)
             {
                 Console.Write("Type 'add' to add more, 'search' to search, or 'q' to quit: ");
@@ -50,6 +52,7 @@ class Product
 
         static void AddProductLoop()
         {
+            // Loop to add more products
             while (true)
             {
 
@@ -81,6 +84,7 @@ class Product
             }
         }
 
+        // Display the product list
         static void DisplayProductList(string highlight = null)
         {
             Console.WriteLine("\n--- Product List ---");
@@ -113,6 +117,7 @@ class Product
             Console.WriteLine();
         }
 
+        // Search products by term
         static void Search()
         {
             Console.Write("Enter search term: ");
